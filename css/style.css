@@ -1,0 +1,494 @@
+* {
+    box-sizing: none;
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    width: 100%;
+    height: 1000px;
+}
+
+#header {
+    background: #234bbb;
+}
+
+.header-top-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-top-center-search {
+    background: #fff;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    padding: 0px 10px;
+}
+
+.container {
+    max-width: 1432px !important; 
+    margin: 0 auto;
+    padding-left: 15px;
+    padding: 15px;
+}
+
+.header-iconItem {
+    display: flex;
+    color: #fff;
+}
+
+.customer-service {
+    display: flex;
+}
+
+.hotline {
+    padding-right: 14px;
+}
+
+.icon-header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    text-decoration: none;
+    padding: 0px 20px;
+
+}
+
+.icon-header:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.icon-header:hover i { 
+    transform: scale(1.2, 1.2);
+    transition: all 0.2s ease-in-out;
+}
+
+.icon-header i {
+    font-size: 24px;
+    
+}
+
+.header-inline-menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-inline-menu ul li {
+    list-style: none;
+}
+
+.header-inline-menu ul li a {
+    text-decoration: none;
+    font-size: 19px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.header-bottom {
+    background: gold;
+}
+
+.annoucement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-dangky {
+    background: #234bbb;
+    color: #fff;
+    padding: 4px 20px;
+    border-radius: 30px;
+    margin-left: 10px;
+    font-weight: 700;
+    
+}
+
+.btn-dangky a {
+    color: #fff; /* Màu chữ trắng */
+    text-decoration: none; /* Loại bỏ decoration */
+}
+
+.btn-dangky a:hover {
+    color: #fff; /* Màu chữ trắng */
+    text-decoration: none; /* Loại bỏ decoration */
+}
+
+.block-header-content {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title .text {
+    color: #3c3c3c;
+    font-weight: 700;
+    margin-bottom: 30px !important;
+    font-size: 20px;
+}
+
+.view_all {
+    color: #3c3c3c;
+    font-weight: 400;
+    margin-bottom: 30px !important;
+}
+
+.block-info-product {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.block-info-product .card {
+    width: 25%;
+    border: none !important;
+}
+
+.themVaoGioHang {
+    display: none;
+    position: absolute;
+    bottom: 10px; 
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+.themVaoGioHang a {
+    font-weight: 700;
+    font-size: 16px;
+    padding: 13px 52px;
+    border-radius: 30px;
+    border: 1px solid #000;
+}
+
+.themVaoGioHang a:hover{
+    background: rgb(240, 132, 65);
+    color: #fff;
+    border: none;
+}
+
+.image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.image img:hover {
+    width: 100%;
+    transform: scale(1.1,1.1);
+}
+
+.image img {
+    transition: all 0.5s ease-in-out;
+}
+
+.image:hover .themVaoGioHang {
+    display: block;
+}
+
+.price {
+    display: flex;
+}
+
+.price-compare {
+    padding: 6px;
+}
+
+.price-compare::before {
+    content: "";
+    display: block;
+    width: 1px;
+    background-color: #515253;
+    height: 12px;   
+}
+
+.block-info-product .card-body a {
+    color: #051c42;
+}
+
+.block-info-product .card-body h5 {
+    color: #234bbb;
+}
+
+.price-regular-item {
+    font-weight: 600;
+}
+
+.price-sale-item {
+    color: #e10600;
+    font-weight: 600;
+}
+
+.separator {
+    border: none;
+    border-top: 2px solid #051c42; /* Màu và độ dày của đường kẻ */
+    width: 50%; /* Độ rộng của đường kẻ */
+    margin: 20px auto; /* Căn giữa theo chiều ngang và đặt khoảng cách trên và dưới */
+}
+
+.block-knowledge {
+    display: flex;
+    justify-content: space-around;
+}
+
+.block-knowledge .card {
+    width: 30%;
+}
+
+.block-location {
+    display: flex;
+    justify-content: space-around;
+}
+
+.block-location .card {
+    width: 47%;
+    border: none !important;
+    text-align: center;
+}
+
+.block-location .card-body a {
+    background: #0849ff;
+    font-weight: 700;
+    padding: 13px 52px;
+    border-radius: 30px;
+    font-size: 16px;
+}   
+
+.block-location .card-body h5 {
+    font-weight: 700;
+}
+
+.buydirectly {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.buydirectly hr {
+    background-color: #234bbb;
+    width: 1359px; /* Độ rộng của đường kẻ */
+    margin: 0 auto;
+}
+
+.buydirectly h3 {
+    display: block;
+    position: absolute;
+    top: -15px;
+    background-color: #fff;
+    color: #234bbb;
+    width: 500px; /* chiều rộng của khối con */
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    left: calc(50% - 250px); /* 50% của khối relative - đi 1 nửa chiều rộng của khối con để căn giữa */
+}
+
+.footer-top-content {
+    background: #f5f5f5;;
+    padding-bottom: 19px;
+}
+
+.footer-top-content-dangkyTV {
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 45px;
+    padding-bottom: 0px;
+}
+
+.footer-top-content-dangkyTV .footer-block-heading {
+    max-width: 640px;
+    color: #051c42;
+    margin: 0 auto;
+    font-size: 29px;
+    font-weight: 700;
+} 
+
+.footer-top-content-dangkyTV .footer-block-subheading {
+    max-width: 640px;
+    margin: 0 auto;
+    color: #051c42;
+}
+
+.footer-top-content-dangkyTV .form-dangkyEmail {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.footer-top-content-dangkyTV .form-dangkyEmail input {
+    border-radius: 6px;
+    border: 1px solid #b4b4b4;
+    width: 475px;
+    height: 49px;
+    padding-left: 10px;
+}
+
+.footer-top-content-dangkyTV .form-dangkyEmail .button-dangkyTV {   
+    background-color: #234bbb;
+    border-radius: 30px;
+    padding: 13px 43px;
+    margin-left: 11px;
+}
+
+.footer-top-content-dangkyTV .form-dangkyEmail .button-dangkyTV:hover {   
+    background-color: #08173f;
+}
+
+.footer-top-content-dangkyTV .form-dangkyEmail .button-dangkyTV a {
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.footer-top-content-cotThongTin {
+    display: flex;
+}
+
+.footer-top-block-item {
+    flex-basis: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 315px;
+}
+
+.footer-block-mobile {
+    text-align: left;
+}
+
+.footer-block-mobile h2 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #051c42;
+}
+
+.footer-block-list ul {
+    list-style: none;
+}
+
+.footer-block-list li {
+    margin: 15px 0;
+}
+
+.footer-block-list li a{
+    text-decoration:  none;
+    color: #051c42;
+    font-weight: 400;
+}
+
+.social-item ul {
+    display: flex;
+}
+
+.social-item ul {
+    font-size: 35px;
+}
+
+.social-item ul li {
+    margin-right: 20px;
+}
+
+.footer-block-bottom {
+    padding-top: 25px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.footer-block-bottom .footer-copyright {
+    flex-basis: 40%;
+}
+
+.footer-block-bottom .logochungnhan img {
+    width: 183px;
+    margin-right: 56px;
+}
+
+.cart {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.cart .modal-header h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 27px;
+    text-transform: uppercase;
+}
+
+img {
+    width: 70px;
+    align-items: center;
+}
+td input {
+    width: 30px;
+    outline: none;
+}
+td i {
+    cursor: pointer;
+}
+
+#block-ThanhToan {
+    margin: 20px;
+}
+
+#block-ThanhToan p{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#thanhToan a {
+    font-weight: 700;
+    font-size: 16px;
+    padding: 13px 176px;
+    border-radius: 30px;
+    border: 1px solid #000;
+}
+
+#thanhToan a:hover{
+    background: rgb(240, 132, 65);
+    color: #fff;
+    border: none;
+}
+
+.cart {
+    position: fixed;
+    height: 100vh;
+    width: 500px;
+    right: -500px;
+    top: 0;
+    background-color: #fff;
+    padding: 12px 20px;
+    overflow-y: scroll;
+    transition: all 0.5s ease-in-out ;
+    z-index: 2;
+}
+
+.action {
+    right: 0px;
+}
+
+
+#darkOverLay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu đen với độ mờ */
+    z-index: 1; /* Đặt ở trên mọi thứ ngoại trừ modal */
+  }
+/* 
+#icon-gioHang {
+    display: block;
+} */
+

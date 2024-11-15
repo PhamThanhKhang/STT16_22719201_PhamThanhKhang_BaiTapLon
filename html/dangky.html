@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký tài khoản</title>
+    <link rel="icon" href="../img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="wrapper" style="background-image: url('../img/backgroundDangKy.jpg'); background-repeat: repeat;">
+        <div class="container">
+            <div class="row justify-content-around">
+                <form id="registration-form" class="col-md-6 bg-light p-3 my-3" style="border: 3px solid orange; border-radius: 10px;">
+                    <h1 class="text-center text-uppercase h3 py-3">Đăng ký tài khoản</h1>
+                    <div class="form-group">
+                        <label for="username">Tên đăng nhập</label>
+                        <input type="text" name="username" id="username" class="form-control">
+                        <small id="username-error" class="text-danger"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Mật khẩu</label>
+                        <input type="password" name="password" id="password" class="form-control">
+                        <small id="password-error" class="text-danger"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="auth-password">Nhập lại mật khẩu</label>
+                        <input type="password" name="auth-password" id="auth-password" class="form-control">
+                        <small id="auth-password-error" class="text-danger"></small>
+                    </div>
+
+                    <h1 class="text-center text-uppercase h3 py-3">Thông tin cá nhân</h1>
+                    <div class="form-group">
+                        <label for="fullname">Họ và tên</label>
+                        <input type="text" name="fullname" id="fullname" class="form-control">
+                        <small id="fullname-error" class="text-danger"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birth-date">Ngày sinh</label>
+                        <input type="date" name="birth-date" id="birth-date" class="form-control">
+                        <small id="birth-date-error" class="text-danger"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Giới tính</label>
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" name="gender" id="male" value="male" class="form-check-input" checked>
+                                <label for="male" class="form-check-label">Nam</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" name="gender" id="female" value="female" class="form-check-input">
+                                <label for="female" class="form-check-label">Nữ</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Địa chỉ</label>
+                        <input type="text" name="address" id="address" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phoneNumber">Điện thoại</label>
+                        <input type="text" name="phoneNumber" id="phoneNumber" class="form-control">
+                        <small id="phoneNumber-error" class="text-danger"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" class="form-control">
+                        <small id="email-error" class="text-danger"></small>
+                    </div>
+
+                    <input type="submit" value="Đăng ký" class="btn btn-warning btn-block" style="background-color: orange; color: white;">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#username').on('input', function(){
+                validateUsername();
+            });
+
+            $('#password').on('input', function(){
+                validatePassword();
+            });
+
+            $('#auth-password').on('input', function(){
+                validateAuthPassword();
+            });
+
+            $('#fullname').on('input', function(){
+                validateFullname();
+            });
+
+            $('#birth-date').on('input', function(){
+                validateBirthDate();
+            });
+
+            $('#phoneNumber').on('input', function(){
+                validatePhoneNumber();
+            });
+
+            $('#email').on('input', function(){
+                validateEmail();
+            });
+
+            $('#registration-form').submit(function(e){
+                e.preventDefault();
+                // Thực hiện validate tất cả các trường trước khi submit
+                validateUsername();
+                validatePassword();
+                validateAuthPassword();
+                validateFullname();
+                validateBirthDate();
+                validatePhoneNumber();
+                validateEmail();
+
+                // Kiểm tra nếu không có lỗi
+                if ($('#username-error').text() === '' &&
+                    $('#password-error').text() === '' &&
+                    $('#auth-password-error').text() === '' &&
+                    $('#fullname-error').text() === '' &&
+                    $('#birth-date-error').text() === '' &&
+                    $('#phoneNumber-error').text() === '' &&
+                    $('#email-error').text() === '') {
+                    // Lưu thông tin tài khoản vào localStorage
+                    var account = {
+                        username: $('#username').val().trim(),
+                        password: $('#password').val().trim(),
+                        fullname: $('#fullname').val().trim(),
+                        birthDate: $('#birth-date').val().trim(),
+                        gender: $('input[name="gender"]:checked').val(),
+                        address: $('#address').val().trim(),
+                        phoneNumber: $('#phoneNumber').val().trim(),
+                        email: $('#email').val().trim()
+                    };
+                    localStorage.setItem('account', JSON.stringify(account));
+
+                    // Chuyển hướng về trang chủ
+                    window.location.href = 'index.html'; // Điều chỉnh đường dẫn trang chủ của bạn
+                }
+            });
+        });
+
+        function validateUsername() {
+            var username = $('#username').val().trim();
+            var usernameRegex = /^[a-zA-Z0-9_]{8,}$/;
+            if(!usernameRegex.test(username)){
+                $('#username-error').text('Tên đăng nhập ít nhất 8 ký tự và chỉ chứa chữ, số và dấu gạch dưới.');
+            } else {
+                $('#username-error').text('');
+            }
+        }
+
+        function validatePassword() {
+            var password = $('#password').val().trim();
+            var passwordRegex = /^.{8,}$/;
+            if(!passwordRegex.test(password)){
+                $('#password-error').text('Mật khẩu ít nhất 8 ký tự.');
+            } else {
+                $('#password-error').text('');
+            }
+        }
+
+        function validateAuthPassword() {
+            var password = $('#password').val().trim();
+            var authPassword = $('#auth-password').val().trim();
+            if(authPassword !== password){
+                $('#auth-password-error').text('Nhập lại mật khẩu bên trên.');
+            } else {
+                $('#auth-password-error').text('');
+            }
+        }
+
+        function validateFullname() {
+            var fullname = $('#fullname').val().trim();
+            var fullnameRegex = /^[a-zA-Z]+\s[a-zA-Z]+\s[a-zA-Z]+$/;
+            if(!fullnameRegex.test(fullname)){
+                $('#fullname-error').text('Họ tên không hợp lệ');
+            } else {
+                $('#fullname-error').text('');
+            }
+        }
+
+        function validateBirthDate() {
+            var currentDate = new Date();
+            var inputDate = new Date($('#birth-date').val().trim());
+            if(inputDate >= currentDate){
+                $('#birth-date-error').text('Ngày sinh phải trước ngày hiện tại.');
+            } else {
+                $('#birth-date-error').text('');
+            }
+        }
+
+        function validatePhoneNumber() {
+            var phoneNumber = $('#phoneNumber').val().trim();
+            var phoneNumberRegex = /^\d{10}$/;
+            if(!phoneNumberRegex.test(phoneNumber)){
+                $('#phoneNumber-error').text('Số điện thoại phải có 10 số.');
+            } else {
+                $('#phoneNumber-error').text('');
+            }
+        }
+
+        function validateEmail() {
+            var email = $('#email').val().trim();
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(!emailRegex.test(email)){
+                $('#email-error').text('Email không hợp lệ.');
+            } else {
+                $('#email-error').text('');
+            }
+        }
+    </script>
+</body>
+</html>

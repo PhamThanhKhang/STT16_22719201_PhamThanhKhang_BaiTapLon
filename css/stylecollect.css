@@ -1,0 +1,338 @@
+* {
+    box-sizing: none;
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    width: 100%;
+    height: 1000px;
+}
+
+#header {
+    background: #234bbb;
+}
+
+.header-top-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-top-center-search {
+    background: #fff;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    padding: 0px 10px;
+}
+
+.container {
+    max-width: 1432px !important; 
+    margin: 0 auto;
+    padding-left: 15px;
+    padding: 15px;
+}
+
+.header-iconItem {
+    display: flex;
+    color: #fff;
+}
+
+.customer-service {
+    display: flex;
+}
+
+.hotline {
+    padding-right: 14px;
+}
+
+.icon-header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    text-decoration: none;
+    padding: 0px 20px;
+
+}
+
+.icon-header:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.icon-header:hover i { 
+    transform: scale(1.2, 1.2);
+    transition: all 0.2s ease-in-out;
+}
+
+.icon-header i {
+    font-size: 24px;
+    
+}
+
+.header-inline-menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-inline-menu ul li {
+    list-style: none;
+}
+
+.header-inline-menu ul li a {
+    text-decoration: none;
+    font-size: 19px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.header-bottom {
+    background: gold;
+}
+
+.annoucement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-dangky {
+    background: #234bbb;
+    color: #fff;
+    padding: 4px 20px;
+    border-radius: 30px;
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+.btn-dangky a {
+    color: #fff; /* Màu chữ trắng */
+    text-decoration: none; /* Loại bỏ decoration */
+}
+
+.btn-dangky a:hover {
+    color: #fff; /* Màu chữ trắng */
+    text-decoration: none; /* Loại bỏ decoration */
+}
+
+.mid-content{
+    height: 450px;
+    padding-top: 5px;
+}
+
+.container-00{
+    display: flex;
+    padding: 30px 0;
+    border-top: 1px solid rgba(0,0,0,.07);
+    
+}
+
+
+
+
+.brand-list1 .brand{
+    height: 160px;
+    width: 270px;
+}
+
+.brand-list2 .brand{
+    height: 160px;
+    width: 270px;
+}
+
+.brand-list1{
+    display: flex;
+    width: 100%;
+    height: 200px
+}
+
+.brand-list2{
+    display: flex;
+    width: 100%;
+    height: 200px
+}
+
+.brand{
+    margin: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.1);
+    padding-top: 30px;
+    padding-bottom: 15px;
+    border-radius: 4px;
+}
+
+.brand img{
+    margin-top: -15px;
+    max-width: 100%;
+    max-height: 100%;
+    
+}
+
+.brand:nth-child(1){
+    margin-left: 25px;
+}
+
+
+image:hover a .text{
+    color: #234bbb;
+    text-decoration: underline;
+}
+
+a.text{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: black;
+}
+
+.container-00 i{
+    justify-content: center;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 20px;
+    border: 1px solid blue;
+    border-radius: 50% ;
+    background: #ffffff;
+    transform: translateY(90px);
+}
+
+.container-00 i:first-child{
+    left: 5px;
+}
+
+.container-00 i:last-child{
+    right: 5px;
+}
+
+
+
+
+.footer-top-content {
+    background: #f5f5f5;;
+    padding-bottom: 19px;
+}
+
+.footer-top-content-dangkyTV {
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 45px;
+    padding-bottom: 0px;
+}
+
+.footer-top-content-dangkyTV .footer-block-heading {
+    max-width: 640px;
+    color: #051c42;
+    margin: 0 auto;
+    font-size: 29px;
+    font-weight: 700;
+} 
+
+.footer-top-content-dangkyTV .footer-block-subheading {
+    max-width: 640px;
+    margin: 0 auto;
+    color: #051c42;
+}
+
+.footer-top-content-dangkyTV .form-dangkyEmail {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.footer-top-content-dangkyTV .form-dangkyEmail input {
+    border-radius: 6px;
+    border: 1px solid #b4b4b4;
+    width: 475px;
+    height: 49px;
+    padding-left: 10px;
+}
+
+.footer-top-content-dangkyTV .form-dangkyEmail .button-dangkyTV {   
+    background-color: #234bbb;
+    border-radius: 30px;
+    padding: 13px 43px;
+    margin-left: 11px;
+}
+
+.footer-top-content-dangkyTV .form-dangkyEmail .button-dangkyTV:hover {   
+    background-color: #08173f;
+}
+
+.footer-top-content-dangkyTV .form-dangkyEmail .button-dangkyTV a {
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.footer-top-content-cotThongTin {
+    display: flex;
+}
+
+.footer-top-block-item {
+    flex-basis: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 315px;
+}
+
+.footer-block-mobile {
+    text-align: left;
+}
+
+.footer-block-mobile h2 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #051c42;
+}
+
+.footer-block-list ul {
+    list-style: none;
+}
+
+.footer-block-list li {
+    margin: 15px 0;
+}
+
+.footer-block-list li a{
+    text-decoration:  none;
+    color: #051c42;
+    font-weight: 400;
+}
+
+.social-item ul {
+    display: flex;
+}
+
+.social-item ul {
+    font-size: 35px;
+}
+
+.social-item ul li {
+    margin-right: 20px;
+}
+
+.footer-block-bottom {
+    padding-top: 25px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.footer-block-bottom .footer-copyright {
+    flex-basis: 40%;
+}
+
+.footer-block-bottom .logochungnhan img {
+    width: 183px;
+    margin-right: 56px;
+}
+
